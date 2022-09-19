@@ -139,8 +139,18 @@ export default class Acoes extends Component {
                 </div>
               </fieldset>
               <div className="rodape">
-                <button onClick={ ativaTimer }>{ botaoIniciar ? 'Recomeçar contagem' : 'Iniciar a contagem' }</button>
-                <button onClick={ limpaTudo }>Reset</button>
+                <button
+                  onClick={ ativaTimer }
+                  className="css-button-shadow-border-sliding--yellow"
+                >
+                  { botaoIniciar ? '(Reinicia)' : 'Iniciar' }
+                </button>
+                <button
+                  onClick={ limpaTudo }
+                  className="css-button-shadow-border-sliding--yellow"
+                >
+                    Cancelar
+                </button>
               </div>
             </form>            
           </div>
