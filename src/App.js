@@ -12,6 +12,10 @@ export default class App extends Component {
     click: false,
   }
 
+  componentDidMount() {
+    document.title = "Intervalo da turma 24"
+  }
+
   check = (event) => {
     const { target } = event;
     const qto = target.value * 60;
