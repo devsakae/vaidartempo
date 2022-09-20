@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Acoes from './components/Acoes';
 import Timer from './components/Timer';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css'
 
 export default class App extends Component {
@@ -83,6 +84,7 @@ export default class App extends Component {
         ) }
           <Acoes check={ this.check }/>
         </div>
+        <Footer />
       </main>
     )
   }
