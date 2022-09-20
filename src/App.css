@@ -1,18 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-	font-family: 'Lato', sans-serif;
-	font-size: larger;
-}
-
-h1 {
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase;
+	font-family: 'Kanit', sans-serif;
+	font-size: 20px;
 }
 
 fieldset {
@@ -21,18 +16,30 @@ fieldset {
 	padding: 0;
 }
 
-legend {
-  font-weight: 600;
-  margin-block-end: 0.5em;
-  padding: 0;
-}
-
 main {
 	display: flex;
 	flex-flow: column;
 }
 
-.css-button-shadow-border-sliding--yellow {
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.header h3 {
+	font-size: 2em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	margin-bottom: -10px;
+}
+
+.header p {
+	font-size: 1.5em;
+}
+
+button {
   min-width: 180px;
   height: 40px;
   color: #000;
@@ -50,11 +57,11 @@ main {
   background: #ffd819;
  z-index: 1;
 }
-.css-button-shadow-border-sliding--yellow:hover:after {
+button:hover:after {
   width: 100%;
   left: 0;
 }
-.css-button-shadow-border-sliding--yellow:after {
+button:after {
   border-radius: 5px;
   position: absolute;
   content: "";
@@ -67,21 +74,20 @@ main {
   background-color: #ffe566;
   right: 0;
 }
-.css-button-shadow-border-sliding--yellow:active {
+button:active {
   top: 2px;
 }
 
 .container {
 	display: flex;
-  align-items: center;
+	flex-flow: row wrap;
+  align-items: flex-start;
 	justify-content: space-evenly;
 }
 
 .cardapio {
-  border-radius: 2em;
   inline-size: 40vw;
-  overflow: auto;
-  padding: 2em;
+  overflow: none;
 }
 
 .cabecalho {
@@ -106,6 +112,7 @@ main {
 }
 
 .rodape {
+	margin-top: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -143,32 +150,18 @@ main {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	background-color: transparent;
 	border-radius: 3px;
 	box-shadow: none;
 }
 
 .clock-column {
-	margin-right: 7rem;
+	margin-right: 5rem;
 	text-align: center;
 	position: relative;
-	&::after {
-		content: ':';
-		display: block;
-		height: .25rem;
-		width: .25rem;
-		font-size: 36px;
-		font-weight: 200;
-		color: #131313;
-		position: absolute;
-		top: 60px;
-		right: -35px;
-	}
-	&:last-child {
-		&::after {
-			display: none;
-		}
-	}
+}
+
+.clock-column:last-child::after {
+	display: none;
 }
 
 .clock-column:last-child {
@@ -176,16 +169,15 @@ main {
 }
 
 .clock-label {
-	padding-top: 10px;
-	text-transform: uppercase;
+	border-top: 1px solid rgba(19, 19, 19, 0.5);
 	color: #131313;
 	font-size: 24px;
+	padding-top: 10px;
 	text-align: center;
-	border-top: 1px solid rgba(19, 19, 19, 0.5);
+	text-transform: uppercase;
 }
 
 .clock-timer {
-	color: #131313;
-	font-size: 66px;
+	font-size: 72px;
 	line-height: 1;
 }

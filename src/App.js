@@ -17,7 +17,9 @@ export default class App extends Component {
   }
 
   check = (event) => {
+    const { total } = this.state;
     const { target } = event;
+    if (total === 0 && !target.checked) return;
     const qto = target.value * 60;
     this.setState((prevState) => ({
       total: target.checked ? Number(prevState.total + qto) : Number(prevState.total - qto),
@@ -26,16 +28,9 @@ export default class App extends Component {
 
   ativaTimer = (event) => {
     event.preventDefault();
-    const { click } = this.state;
-    if (click) { this.setState({
-      click: false,
-    })
-    }
-    else {
-      this.setState({
-        click: true,
-      })
-    }
+    this.setState((prevState) => ({
+      click: !prevState.click 
+    }))
   }
 
   limpaTudo = () => {
@@ -45,7 +40,7 @@ export default class App extends Component {
   }
 
   render() {
-    const { total, click } = this.state;
+    const { total, click, botaoIniciar } = this.state;
     const minutos = Math.floor(total / 60);
     const segundos = total % 60;
 
@@ -53,29 +48,40 @@ export default class App extends Component {
       <main>
         <Header />
         <div className="container">
-          <Acoes
-            check={ this.check }
-            ativaTimer={ this.ativaTimer }
-            limpaTudo={ this.limpaTudo }
-            botaoIniciar={ click }
-          />
           { total > 0 && click ? <Timer
             minutos={ minutos }
             segundos={ segundos }
+            ativaTimer={ this.ativaTimer }
+            limpaTudo={ this.limpaTudo }
+            botaoIniciar={ click }
           /> : (
-            <div className="cronometro">
-            <div className="clock-container">
-              <div className="clock-column">
-                <p className="clock-minutes clock-timer">{ minutos }</p>
-                <p className="clock-label">MINUTOS</p>
+            <div className="container-col">
+              <div className="cronometro">
+                <div className="clock-container">
+                  <div className="clock-column">
+                    <p className="clock-minutes clock-timer">{ minutos }</p>
+                    <p className="clock-label">MINUTOS</p>
+                  </div>
+                  <div className="clock-column">
+                    <p className="clock-seconds clock-timer">{ segundos }</p>
+                    <p className="clock-label">SEGUNDOS</p>
+                  </div>
+                </div>
               </div>
-              <div className="clock-column">
-                <p className="clock-seconds clock-timer">{ segundos }</p>
-                <p className="clock-label">SEGUNDOS</p>
+              <div className="rodape">
+                <button
+                  onClick={ this.ativaTimer }
+                  disabled={ total === 0 }
+                >
+                  { botaoIniciar ? '(Cancelar)' : 'Iniciar' }
+                </button>
+                <button onClick={ this.limpaTudo }>
+                    Ctrl + Alt + Del
+                </button>
               </div>
             </div>
-          </div>
-          ) }
+        ) }
+          <Acoes check={ this.check }/>
         </div>
       </main>
     )

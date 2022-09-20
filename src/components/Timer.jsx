@@ -39,20 +39,32 @@ export default class Timer extends Component {
 
   render() {
     const { minutos, segundos } = this.state;
+    const { ativaTimer, limpaTudo, botaoIniciar } = this.props;
     return (
-      <div className="cronometro">
-        <div className="clock-container">
-          <div className="clock-column">
-            <p className="clock-minutes clock-timer">{ minutos }</p>
-            <p className="clock-label">MINUTOS</p>
-          </div>
-          <div className="clock-column">
-            <p className="clock-seconds clock-timer">{ segundos }</p>
-            <p className="clock-label">SEGUNDOS</p>
+      <div className="container-col">
+        <div className="cronometro">
+          <div className="clock-container">
+            <div className="clock-column">
+              <p className="clock-minutes clock-timer">{ minutos }</p>
+              <p className="clock-label">MINUTOS</p>
+            </div>
+            <div className="clock-column">
+              <p className="clock-seconds clock-timer">{ segundos }</p>
+              <p className="clock-label">SEGUNDOS</p>
+            </div>
           </div>
         </div>
+        <div className="rodape">
+          <button
+            onClick={ ativaTimer }
+          >
+            { botaoIniciar ? '(Cancelar)' : 'Iniciar' }
+          </button>
+          <button onClick={ limpaTudo }>
+              Ctrl + Alt + Del
+          </button>
+        </div>
       </div>
-
     )
   }
 }
