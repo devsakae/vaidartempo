@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/vaidartempo/static/css/main.4e634187.css",
-    "main.js": "/vaidartempo/static/js/main.1798018b.js",
+    "main.css": "/vaidartempo/static/css/main.b1229439.css",
+    "main.js": "/vaidartempo/static/js/main.a04a3541.js",
     "static/js/787.0699733e.chunk.js": "/vaidartempo/static/js/787.0699733e.chunk.js",
     "index.html": "/vaidartempo/index.html",
-    "main.4e634187.css.map": "/vaidartempo/static/css/main.4e634187.css.map",
-    "main.1798018b.js.map": "/vaidartempo/static/js/main.1798018b.js.map",
+    "main.b1229439.css.map": "/vaidartempo/static/css/main.b1229439.css.map",
+    "main.a04a3541.js.map": "/vaidartempo/static/js/main.a04a3541.js.map",
     "787.0699733e.chunk.js.map": "/vaidartempo/static/js/787.0699733e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e634187.css",
-    "static/js/main.1798018b.js"
+    "static/css/main.b1229439.css",
+    "static/js/main.a04a3541.js"
   ]
 }
