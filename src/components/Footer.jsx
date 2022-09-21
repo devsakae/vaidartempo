@@ -6,13 +6,13 @@ export default class Footer extends Component {
       <footer>
         <div>
           <a href="https://github.com/devsakae/vaidartempo">
-            <i class="bi bi-github"></i>
+            <i className="bi bi-github"></i>
           </a>
           <a href="http://twitter.com/Sakae">
-            <i class="bi bi-twitter"></i>
+            <i className="bi bi-twitter"></i>
           </a>
           <a href="http://devsakae.me">
-          <i class="bi bi-person-video"></i>
+            <i className="bi bi-person-video"></i>
           </a>
         </div>
         <div>

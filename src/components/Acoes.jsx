@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // Importação graças a ajuda do Washington
-const actions = require('../Oquefazer');
+const actions = require('../conteudo/acoes');
 
 export default class Acoes extends Component {
   state = {

@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import falta1min from '../conteudo/audio-falta1min.mp3';
+import audio01 from '../conteudo/audio01.mp3';
+import audio02 from '../conteudo/audio02.mp3';
+import audio03 from '../conteudo/audio03.mp3';
 
 export default class Timer extends Component {
   state = {
@@ -8,6 +12,11 @@ export default class Timer extends Component {
 
   componentDidMount() {
     const { minutos, segundos } = this.props;
+    const primeiroAudio = new Audio(falta1min);
+    const fins = [audio01, audio02, audio03];
+    const random = Math.floor(Math.random() * fins.length);
+    const segundoAudio = new Audio(fins[random]);
+    console.log(segundoAudio);
     this.setState({
       minutos,
       segundos,
@@ -19,7 +28,8 @@ export default class Timer extends Component {
             segundos: segundos - 1
           }))
       }
-      if (minutos === 1 && segundos === 1) console.log('falta 1 minuto')
+      if (minutos === 1 && segundos === 2) primeiroAudio.play();
+      if (minutos === 0 && segundos === 2) segundoAudio.play();
       if (segundos === 0) {
         if (minutos === 0) {
             clearInterval(this.myInterval)
