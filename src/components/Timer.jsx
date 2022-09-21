@@ -16,7 +16,6 @@ export default class Timer extends Component {
     const fins = [audio01, audio02, audio03];
     const random = Math.floor(Math.random() * fins.length);
     const segundoAudio = new Audio(fins[random]);
-    console.log(segundoAudio);
     this.setState({
       minutos,
       segundos,
