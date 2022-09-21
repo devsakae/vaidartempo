@@ -1,15 +1,19 @@
 {
   "files": {
     "main.css": "/vaidartempo/static/css/main.b25d69ce.css",
-    "main.js": "/vaidartempo/static/js/main.c0552608.js",
+    "main.js": "/vaidartempo/static/js/main.adb10482.js",
     "static/js/787.0699733e.chunk.js": "/vaidartempo/static/js/787.0699733e.chunk.js",
+    "static/media/audio03.mp3": "/vaidartempo/static/media/audio03.68366eaddab07af85124.mp3",
+    "static/media/audio02.mp3": "/vaidartempo/static/media/audio02.4a2e1e715bd201c946b4.mp3",
+    "static/media/audio01.mp3": "/vaidartempo/static/media/audio01.38a5898f4e90a02c7897.mp3",
+    "static/media/audio-falta1min.mp3": "/vaidartempo/static/media/audio-falta1min.b0e2dd4ea7ec90fea017.mp3",
     "index.html": "/vaidartempo/index.html",
     "main.b25d69ce.css.map": "/vaidartempo/static/css/main.b25d69ce.css.map",
-    "main.c0552608.js.map": "/vaidartempo/static/js/main.c0552608.js.map",
+    "main.adb10482.js.map": "/vaidartempo/static/js/main.adb10482.js.map",
     "787.0699733e.chunk.js.map": "/vaidartempo/static/js/787.0699733e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b25d69ce.css",
-    "static/js/main.c0552608.js"
+    "static/js/main.adb10482.js"
   ]
 }
