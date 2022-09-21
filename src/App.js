@@ -47,7 +47,10 @@ export default class App extends Component {
 
     return (
       <main>
-        <Header />
+        <Header
+          startado={ !click }
+          minutos={ minutos }
+        />
         <div className="container">
           { total > 0 && click ? <Timer
             minutos={ minutos }

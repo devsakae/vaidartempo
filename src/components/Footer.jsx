@@ -14,8 +14,6 @@ export default class Footer extends Component {
           <a href="http://devsakae.me">
             <i className="bi bi-person-video"></i>
           </a>
-        </div>
-        <div>
           @devsakae
         </div>
       </footer>
