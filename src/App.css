@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin&family=Silkscreen&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 * {
@@ -213,6 +214,7 @@ footer a {
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 20px;
+	min-height: 12vh;
 }
 
 .quotainer button {
@@ -221,4 +223,37 @@ footer a {
 	font-size: 15px;
 	margin: 5px 10px;
 	box-shadow: 2px 2px #ccc;
+}
+
+.tech {
+	font-family: 'M PLUS Code Latin', sans-serif;
+}
+
+blockquote {
+	font-weight: 100;
+	font-size: 2rem;
+	line-height: 1.4;
+	position: relative;
+	margin: 0;
+	padding: .5rem;
+}
+
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: #f1efe6;
+	font-size: 8rem;
+	height: 4rem;
+}
+
+blockquote:before {
+	content: '“';
+	left: -5rem;
+	top: -2rem;
+}
+
+blockquote:after {
+	content: '”';
+	right: -5rem;
+	bottom: 1rem;
 }
