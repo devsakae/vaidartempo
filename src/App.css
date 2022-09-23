@@ -22,6 +22,7 @@ fieldset {
 main {
 	display: flex;
 	flex-flow: column;
+	justify-content: space-between;
 }
 
 button {
@@ -83,7 +84,7 @@ footer a {
 	margin-right: 10px;
 }
 
-.header {
+header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -91,13 +92,13 @@ footer a {
 	min-height: 17.5vh;
 }
 
-.header h3 {
+header h3 {
 	font-size: 2em;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 }
 
-.header p {
+header p {
 	font-size: 1.5em;
 }
 
@@ -151,6 +152,12 @@ footer a {
 	text-shadow: 1px 1px #ccc
 }
 
+.container-col {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
 .cabecalho {
   display: flex;
@@ -162,7 +169,7 @@ footer a {
 .cronometro {
 	display: flex;
 	justify-content: center;
-	min-height: 40vh;
+	max-height: 50vh;
 	background: rgb(241,247,10);
 	background: linear-gradient(147deg, rgba(241,247,10,1) 34%, rgba(235,191,10,1) 68%);
   border-radius: 2em;
@@ -236,6 +243,11 @@ blockquote {
 	position: relative;
 	margin: 0;
 	padding: .5rem;
+	animation: fadeIn 7s;
+  -webkit-animation: fadeIn 7s;
+  -moz-animation: fadeIn 7s;
+  -o-animation: fadeIn 7s;
+  -ms-animation: fadeIn 7s;
 }
 
 blockquote:before,
@@ -256,4 +268,29 @@ blockquote:after {
 	content: '”';
 	right: -5rem;
 	bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

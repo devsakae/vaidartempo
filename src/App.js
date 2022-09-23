@@ -14,7 +14,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    document.title = "Intervalo da turma 24"
+    document.title = "Hora do intervalo"
   }
 
   check = (event) => {

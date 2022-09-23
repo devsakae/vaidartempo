@@ -11,7 +11,7 @@ export default class Quotes extends Component {
   yes = () => {
     const totalDeQuotes = [];
     const { minutos } = this.props;
-    for (let i = 0; i < minutos; i += 1) {
+    for (let i = -1; i < minutos; i += 1) {
       const random = Math.floor(Math.random() * 1000);
       totalDeQuotes.push(quotes['tech'][random]);
     }
@@ -26,18 +26,23 @@ export default class Quotes extends Component {
     }, 60000)
   }
 
+  startIn = (sec) => {
+    setTimeout(() => this.yes(), sec * 1000)
+  }
+
   render() {
     const { showQuotes, quotes, random } = this.state;
     return (
       <div className="quotainer">
-        { showQuotes ? (<blockquote className='tech'>{ quotes[random] }</blockquote>) : (
+        { showQuotes ? (<blockquote className='tech fadeinquote'>{ quotes[random] }</blockquote>) : (
           <>
             <div>
-              Enquanto aguarda, quer mostrar frases inpiracionais?
+              Enquanto aguarda, vou mostrar frases inspiracionais a não ser que você cancele ok?
             </div>
             <div>
               <button onClick={ () => this.yes() }>Sim</button>
-              <button onClick={ () => this.yes() }>Claro</button>
+              <button onClick={ () => this.yes() }>Não vou cancelar</button>
+              { this.startIn(5) }
             </div>
           </>
         ) }
