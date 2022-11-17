@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/vaidartempo/static/css/main.d0a1c1ae.css",
-    "main.js": "/vaidartempo/static/js/main.c6853c01.js",
+    "main.js": "/vaidartempo/static/js/main.744e1871.js",
     "static/js/787.0699733e.chunk.js": "/vaidartempo/static/js/787.0699733e.chunk.js",
+    "static/media/audio-maite.mp3": "/vaidartempo/static/media/audio-maite.a24bb3eb2518fb5295ad.mp3",
     "static/media/audio-falta1min02.mp3": "/vaidartempo/static/media/audio-falta1min02.fce0156fd772c277c09d.mp3",
     "static/media/audio-falta1min01.mp3": "/vaidartempo/static/media/audio-falta1min01.b0e2dd4ea7ec90fea017.mp3",
     "static/media/audio04.ogg": "/vaidartempo/static/media/audio04.00c5abc79819c29710a9.ogg",
@@ -11,11 +12,11 @@
     "static/media/audio05.ogg": "/vaidartempo/static/media/audio05.c0a32fba7f24faee6b27.ogg",
     "index.html": "/vaidartempo/index.html",
     "main.d0a1c1ae.css.map": "/vaidartempo/static/css/main.d0a1c1ae.css.map",
-    "main.c6853c01.js.map": "/vaidartempo/static/js/main.c6853c01.js.map",
+    "main.744e1871.js.map": "/vaidartempo/static/js/main.744e1871.js.map",
     "787.0699733e.chunk.js.map": "/vaidartempo/static/js/787.0699733e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0a1c1ae.css",
-    "static/js/main.c6853c01.js"
+    "static/js/main.744e1871.js"
   ]
 }
