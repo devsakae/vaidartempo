@@ -16,6 +16,12 @@ export default class Footer extends Component {
           </a>
           @devsakae
         </div>
+        <div>
+        <label className="switch">
+          <input type="checkbox" />
+          <span className="slider"></span>
+        </label>
+        </div>
       </footer>
     )
   }
