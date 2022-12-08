@@ -96,6 +96,7 @@ header h3 {
 	font-size: 2em;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 header p {
@@ -112,6 +113,7 @@ header p {
 .cardapio {
 	min-width: 45vw;
   overflow: none;
+	padding-bottom: 10vh;
 }
 
 .form {
