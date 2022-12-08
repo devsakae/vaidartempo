@@ -5,6 +5,7 @@ import min01a from '../conteudo/audio-falta1min01.mp3';
 import min01b from '../conteudo/audio-falta1min02.mp3';
 import aline from '../conteudo/audio-aline.mp3';
 import thiagolopes01 from '../conteudo/audio-thiagolopes-falta1min.mp3';
+import nati01 from '../conteudo/audio-nati-falta1min.ogg';
 
 // Acabou o tempo
 import lele1 from '../conteudo/audio01.mp3';
@@ -15,8 +16,9 @@ import isa from '../conteudo/audio05.ogg';
 import uoxton from '../conteudo/audio06.ogg';
 import cris from '../conteudo/audio07.ogg';
 import maite from '../conteudo/audio-maite.mp3';
-import thiagolopes02 from '../conteudo/audio-thiagolopes-fim.mp3';
+import thiagolopes from '../conteudo/audio-thiagolopes-fim.mp3';
 import carolinalima from '../conteudo/audio-carolina.mp3';
+import nati from '../conteudo/audio-nati.ogg';
 
 export default class Timer extends Component {
   state = {
@@ -26,10 +28,10 @@ export default class Timer extends Component {
 
   componentDidMount() {
     const { minutos, segundos } = this.props;
-    const quase = [min01a, aline, min01b, thiagolopes01];
+    const quase = [min01a, aline, min01b, thiagolopes01, nati01];
     const quaseRandom = Math.floor(Math.random() * quase.length);
     const primeiroAudio = new Audio(quase[quaseRandom]);
-    const fins = [lele1, ernani, lele2, isa, uoxton, lele3, cris, maite, thiagolopes02, carolinalima];
+    const fins = [lele1, ernani, lele2, isa, uoxton, lele3, cris, maite, thiagolopes, carolinalima, nati];
     const finsRandom = Math.floor(Math.random() * fins.length);
     const segundoAudio = new Audio(fins[finsRandom]);
     this.setState({
