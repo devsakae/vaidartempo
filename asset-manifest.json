@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "/vaidartempo/static/css/main.d0a1c1ae.css",
-    "main.js": "/vaidartempo/static/js/main.a9bdf784.js",
+    "main.css": "/vaidartempo/static/css/main.fcc4adf9.css",
+    "main.js": "/vaidartempo/static/js/main.fa8f6d4b.js",
     "static/js/787.0699733e.chunk.js": "/vaidartempo/static/js/787.0699733e.chunk.js",
+    "static/media/audio-carolina.mp3": "/vaidartempo/static/media/audio-carolina.5ab1c7095874d0d7028e.mp3",
+    "static/media/audio-thiagolopes-fim.mp3": "/vaidartempo/static/media/audio-thiagolopes-fim.fcd38abe221cb12d9c5b.mp3",
+    "static/media/audio-thiagolopes-falta1min.mp3": "/vaidartempo/static/media/audio-thiagolopes-falta1min.4c118fb4c9fcdd76b024.mp3",
     "static/media/audio-aline.mp3": "/vaidartempo/static/media/audio-aline.6f31b4f1f915370a3064.mp3",
     "static/media/audio-maite.mp3": "/vaidartempo/static/media/audio-maite.a24bb3eb2518fb5295ad.mp3",
     "static/media/audio03.mp3": "/vaidartempo/static/media/audio03.68366eaddab07af85124.mp3",
@@ -10,17 +13,19 @@
     "static/media/audio02.mp3": "/vaidartempo/static/media/audio02.4a2e1e715bd201c946b4.mp3",
     "static/media/audio01.mp3": "/vaidartempo/static/media/audio01.38a5898f4e90a02c7897.mp3",
     "static/media/audio-falta1min01.mp3": "/vaidartempo/static/media/audio-falta1min01.b0e2dd4ea7ec90fea017.mp3",
+    "static/media/audio-nati.ogg": "/vaidartempo/static/media/audio-nati.1e219fb0f2615bea63e2.ogg",
     "static/media/audio04.ogg": "/vaidartempo/static/media/audio04.00c5abc79819c29710a9.ogg",
     "static/media/audio06.ogg": "/vaidartempo/static/media/audio06.6e8d74c53c2fbe292398.ogg",
     "static/media/audio07.ogg": "/vaidartempo/static/media/audio07.07f9d338e8d21f64745d.ogg",
     "static/media/audio05.ogg": "/vaidartempo/static/media/audio05.c0a32fba7f24faee6b27.ogg",
+    "static/media/audio-nati-falta1min.ogg": "/vaidartempo/static/media/audio-nati-falta1min.0a1802d1d6871b564d43.ogg",
     "index.html": "/vaidartempo/index.html",
-    "main.d0a1c1ae.css.map": "/vaidartempo/static/css/main.d0a1c1ae.css.map",
-    "main.a9bdf784.js.map": "/vaidartempo/static/js/main.a9bdf784.js.map",
+    "main.fcc4adf9.css.map": "/vaidartempo/static/css/main.fcc4adf9.css.map",
+    "main.fa8f6d4b.js.map": "/vaidartempo/static/js/main.fa8f6d4b.js.map",
     "787.0699733e.chunk.js.map": "/vaidartempo/static/js/787.0699733e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0a1c1ae.css",
-    "static/js/main.a9bdf784.js"
+    "static/css/main.fcc4adf9.css",
+    "static/js/main.fa8f6d4b.js"
   ]
 }
