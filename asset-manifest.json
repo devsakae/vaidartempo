@@ -1,10 +1,14 @@
 {
   "files": {
     "main.css": "/vaidartempo/static/css/main.d0a1c1ae.css",
-    "main.js": "/vaidartempo/static/js/main.744e1871.js",
+    "main.js": "/vaidartempo/static/js/main.a9bdf784.js",
     "static/js/787.0699733e.chunk.js": "/vaidartempo/static/js/787.0699733e.chunk.js",
+    "static/media/audio-aline.mp3": "/vaidartempo/static/media/audio-aline.6f31b4f1f915370a3064.mp3",
     "static/media/audio-maite.mp3": "/vaidartempo/static/media/audio-maite.a24bb3eb2518fb5295ad.mp3",
+    "static/media/audio03.mp3": "/vaidartempo/static/media/audio03.68366eaddab07af85124.mp3",
     "static/media/audio-falta1min02.mp3": "/vaidartempo/static/media/audio-falta1min02.fce0156fd772c277c09d.mp3",
+    "static/media/audio02.mp3": "/vaidartempo/static/media/audio02.4a2e1e715bd201c946b4.mp3",
+    "static/media/audio01.mp3": "/vaidartempo/static/media/audio01.38a5898f4e90a02c7897.mp3",
     "static/media/audio-falta1min01.mp3": "/vaidartempo/static/media/audio-falta1min01.b0e2dd4ea7ec90fea017.mp3",
     "static/media/audio04.ogg": "/vaidartempo/static/media/audio04.00c5abc79819c29710a9.ogg",
     "static/media/audio06.ogg": "/vaidartempo/static/media/audio06.6e8d74c53c2fbe292398.ogg",
@@ -12,11 +16,11 @@
     "static/media/audio05.ogg": "/vaidartempo/static/media/audio05.c0a32fba7f24faee6b27.ogg",
     "index.html": "/vaidartempo/index.html",
     "main.d0a1c1ae.css.map": "/vaidartempo/static/css/main.d0a1c1ae.css.map",
-    "main.744e1871.js.map": "/vaidartempo/static/js/main.744e1871.js.map",
+    "main.a9bdf784.js.map": "/vaidartempo/static/js/main.a9bdf784.js.map",
     "787.0699733e.chunk.js.map": "/vaidartempo/static/js/787.0699733e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0a1c1ae.css",
-    "static/js/main.744e1871.js"
+    "static/js/main.a9bdf784.js"
   ]
 }
