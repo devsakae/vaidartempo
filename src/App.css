@@ -372,5 +372,22 @@ blockquote:after {
  .sendit {
 	margin-right: 30px;
  }
+
+ .agradecimentos {
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 10px 0;
+}
+
+ .agradecimentos ul, li {
+	animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+	list-style-type: none;
+	text-align: left;
+ }
  
  /*--------- END --------*/

@@ -1,45 +1,32 @@
 import React, { Component } from 'react';
 
-// Falta 1 minuto
-import min01a from '../conteudo/audio-falta1min01.mp3';
-import min01b from '../conteudo/audio-falta1min02.mp3';
-import aline from '../conteudo/audio-aline.mp3';
-import thiagolopes01 from '../conteudo/audio-thiagolopes-falta1min.mp3';
-import nati01 from '../conteudo/audio-nati-falta1min.ogg';
-import paulinha01 from '../conteudo/audio-paulinha-falta1min.mp4';
-
-// Acabou o tempo
-import lele1 from '../conteudo/audio-lele-01.mp3';
-import lele2 from '../conteudo/audio-lele-02.mp3';
-import lele3 from '../conteudo/audio03.mp3';
-import ernani from '../conteudo/audio04.ogg';
-import isa from '../conteudo/audio05.ogg';
-import uoxton from '../conteudo/audio06.ogg';
-import cris from '../conteudo/audio07.ogg';
-import maite from '../conteudo/audio-maite.mp3';
-import thiagolopes from '../conteudo/audio-thiagolopes-fim.mp3';
-import carolinalima from '../conteudo/audio-carolina.mp3';
-import nati from '../conteudo/audio-nati.ogg';
-import paulinha02 from '../conteudo/audio-paulinha1.mp4';
-import paulinha03 from '../conteudo/audio-paulinha2.mp4'
+import falta1min from '../conteudo/audios-falta1min';
+import fimdotempo from '../conteudo/audios-fimdotempo';
 
 export default class Timer extends Component {
   state = {
     minutos: 0,
     segundos: 0,
+    showUsers: false,
+    users: [],
+    checkUserOne: false,
+    checkUserTwo: false,
   }
 
   componentDidMount() {
     const { minutos, segundos } = this.props;
-    const quase = [min01a, aline, min01b, thiagolopes01, nati01, paulinha01];
-    const quaseRandom = Math.floor(Math.random() * quase.length);
-    const primeiroAudio = new Audio(quase[quaseRandom]);
-    const primeiroNome = quase[quaseRandom];
-    console.log('falta 1 min:', primeiroNome);
-    const fins = [lele1, ernani, lele2, isa, uoxton, lele3, cris, maite, thiagolopes, carolinalima, nati, paulinha02, paulinha03];
-    const finsRandom = Math.floor(Math.random() * fins.length);
-    const segundoAudio = new Audio(fins[finsRandom]);
-    console.log('segundo:', segundoAudio);
+
+    // Sorteia um número limitado as opções do tamanho dos arrays (pa = primeiro audio, sa = segundo audio)
+    const paRandom = Math.floor(Math.random() * falta1min.length);
+    const saRandom = Math.floor(Math.random() * fimdotempo.length);
+
+    // Pega o áudio sorteado
+    const paSorteado = falta1min[paRandom];
+    const saSorteado = fimdotempo[saRandom];
+
+    // Cria um áudio pra ele
+    const paFile = new Audio(paSorteado);
+    const saFile = new Audio(saSorteado);
     this.setState({
       minutos,
       segundos,
@@ -51,8 +38,21 @@ export default class Timer extends Component {
             segundos: segundos - 1
           }))
       }
-      if (minutos === 1 && segundos === 2) primeiroAudio.play();
-      if (minutos === 0 && segundos === 2) segundoAudio.play();
+      if (minutos === 1 && segundos === 20) {
+        this.thankYou(paSorteado, saSorteado);
+      }
+      if (minutos === 1 && segundos === 2) {
+        paFile.play();
+        this.setState({
+          checkUserOne: true,
+        })
+      }
+      if (minutos === 0 && segundos === 2) {
+        saFile.play();
+        this.setState({
+          checkUserTwo: true,
+        })
+      }
       if (segundos === 0) {
         if (minutos === 0) {
             clearInterval(this.myInterval)
@@ -66,12 +66,21 @@ export default class Timer extends Component {
     }, 1000)
   }
 
+  thankYou = (arg1, arg2) => {
+    const userone = arg1.substring(26).split('.')[0];
+    const usertwo = arg2.substring(26).split('.')[0];
+    this.setState({
+      showUsers: true,
+      users: [userone, usertwo]
+    })
+  };
+
   componentWillUnmount() {
     clearInterval(this.myInterval)
   }
 
   render() {
-    const { minutos, segundos } = this.state;
+    const { minutos, segundos, showUsers, users, checkUserOne, checkUserTwo } = this.state;
     const { ativaTimer, limpaTudo, botaoIniciar } = this.props;
     return (
       <div className="container-col">
@@ -97,6 +106,19 @@ export default class Timer extends Component {
               Ctrl + Alt + Del
           </button>
         </div>
+        { showUsers && (
+        <div className="agradecimentos">
+          <div>
+            <h2>Áudios de:</h2>
+          </div>
+          <div>
+            <ul>
+              <li><i className="bi bi-github"></i> { users[0] } { ' ' } { checkUserOne && (<i className="bi bi-check-all"></i>) }</li>
+              <li><i className="bi bi-github"></i> { users[1] } { ' ' } { checkUserTwo && (<i className="bi bi-check-all"></i>) }</li>
+            </ul>
+          </div>
+        </div>
+        ) }
       </div>
     )
   }
