@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container';
 import Acoes from './components/Acoes';
 import Timer from './components/Timer';
 import Header from './components/Header';
@@ -47,12 +48,12 @@ export default class App extends Component {
     const segundos = total % 60;
 
     return (
-      <main>
-        <Header
-          startado={ !click }
-          minutos={ minutos }
-        />
-        <div className="container">
+      <>
+      <Header
+      startado={ !click }
+      minutos={ minutos }
+      />
+      <Container>
           { total > 0 && click ? <Timer
             minutos={ minutos }
             segundos={ segundos }
@@ -87,9 +88,9 @@ export default class App extends Component {
             </div>
         ) }
           <Acoes check={ this.check }/>
-        </div>
-        <Footer />
-      </main>
+        </Container>
+      <Footer />
+      </>
     )
   }
 }

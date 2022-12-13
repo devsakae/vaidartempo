@@ -46,6 +46,9 @@ export default class Timer extends Component {
         this.setState({
           checkUserOne: true,
         })
+        if (!this.state.showUsers) {
+          console.log('execute')
+        }
       }
       if (minutos === 0 && segundos === 2) {
         saFile.play();

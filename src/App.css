@@ -68,13 +68,16 @@ button:active {
 }
 
 footer {
+	align-items: center;
 	display: flex;
 	flex-direction: row;
 	text-align: center;
 	justify-content: space-around;
 	position: fixed;
-	bottom: 10px;
-	width: 100%;
+	bottom: 0;
+	overflow: hidden;
+	width: 100vw;
+	height: 60px;
 	background-color: rgba(255, 255, 255, 0.8)
 }
 
