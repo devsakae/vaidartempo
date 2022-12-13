@@ -37,7 +37,8 @@ export default class App extends Component {
   limpaTudo = () => {
     this.setState({
       total: 0,
-    })
+    });
+    document.location.reload();
   }
 
   render() {

@@ -6,10 +6,11 @@ import min01b from '../conteudo/audio-falta1min02.mp3';
 import aline from '../conteudo/audio-aline.mp3';
 import thiagolopes01 from '../conteudo/audio-thiagolopes-falta1min.mp3';
 import nati01 from '../conteudo/audio-nati-falta1min.ogg';
+import paulinha01 from '../conteudo/audio-paulinha-falta1min.mp4';
 
 // Acabou o tempo
-import lele1 from '../conteudo/audio01.mp3';
-import lele2 from '../conteudo/audio02.mp3';
+import lele1 from '../conteudo/audio-lele-01.mp3';
+import lele2 from '../conteudo/audio-lele-02.mp3';
 import lele3 from '../conteudo/audio03.mp3';
 import ernani from '../conteudo/audio04.ogg';
 import isa from '../conteudo/audio05.ogg';
@@ -19,6 +20,8 @@ import maite from '../conteudo/audio-maite.mp3';
 import thiagolopes from '../conteudo/audio-thiagolopes-fim.mp3';
 import carolinalima from '../conteudo/audio-carolina.mp3';
 import nati from '../conteudo/audio-nati.ogg';
+import paulinha02 from '../conteudo/audio-paulinha1.mp4';
+import paulinha03 from '../conteudo/audio-paulinha2.mp4'
 
 export default class Timer extends Component {
   state = {
@@ -28,12 +31,15 @@ export default class Timer extends Component {
 
   componentDidMount() {
     const { minutos, segundos } = this.props;
-    const quase = [min01a, aline, min01b, thiagolopes01, nati01];
+    const quase = [min01a, aline, min01b, thiagolopes01, nati01, paulinha01];
     const quaseRandom = Math.floor(Math.random() * quase.length);
     const primeiroAudio = new Audio(quase[quaseRandom]);
-    const fins = [lele1, ernani, lele2, isa, uoxton, lele3, cris, maite, thiagolopes, carolinalima, nati];
+    const primeiroNome = quase[quaseRandom];
+    console.log('falta 1 min:', primeiroNome);
+    const fins = [lele1, ernani, lele2, isa, uoxton, lele3, cris, maite, thiagolopes, carolinalima, nati, paulinha02, paulinha03];
     const finsRandom = Math.floor(Math.random() * fins.length);
     const segundoAudio = new Audio(fins[finsRandom]);
+    console.log('segundo:', segundoAudio);
     this.setState({
       minutos,
       segundos,
