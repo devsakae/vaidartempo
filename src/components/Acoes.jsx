@@ -135,6 +135,21 @@ export default class Acoes extends Component {
                   <div className="item-price">5 min</div>
                 </div>
               </label>
+
+              <label htmlFor="dez">
+                <div className="itemLucas">
+                  <div className="item-product">
+                    <input
+                      id="dez"
+                      value="10"
+                      type="checkbox"
+                      onChange={ (e) => check(e) }
+                    />
+                    Facilitar a vida do Lucas
+                  </div>
+                  <div className="item-price">10 min</div>
+                </div>
+              </label>
             </div>
           </form>            
         </div>
