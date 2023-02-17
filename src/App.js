@@ -54,6 +54,7 @@ export default class App extends Component {
 
     return (
       <div className={ this.state.currentTheme }>
+        <div className='realBody'>
       <Header
       startado={ !click }
       minutos={ minutos }
@@ -94,6 +95,7 @@ export default class App extends Component {
         ) }
           <Acoes check={ this.check }/>
         </Container>
+        </div>
       <Footer getCurrentTheme={this.getCurrentTheme} />
       </div>
     )

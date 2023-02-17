@@ -21,6 +21,9 @@
 body {
 	font-family: 'Kanit', sans-serif;
 	font-size: 20px;
+}
+
+.realBody {
 	height: 90vh;
 }
 
@@ -145,6 +148,10 @@ header p {
 	flex-flow: row wrap;
   align-items: flex-start;
 	justify-content: space-evenly;
+}
+
+.dark .container {
+	background-color: var(--darkColor);
 }
 
 .cardapio {
@@ -446,7 +453,7 @@ blockquote:after {
  }
  
  input:checked + .slider:after {
-	content: 'EM BREVE';
+	content: 'lightmode';
  }
 
  .sendmail {
