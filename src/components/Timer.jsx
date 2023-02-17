@@ -55,6 +55,7 @@ export default class Timer extends Component {
         this.setState({
           checkUserTwo: true,
         })
+        window.alert('Lembrar de colocar a aula pra gravar!');
       }
       if (segundos === 0) {
         if (minutos === 0) {

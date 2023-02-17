@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 
 export default class Footer extends Component {
+  state = {
+    checkedSwitch: localStorage.getItem('darkMode') === 'dark',
+  }
+
+  setLocalStorage = () => {
+    const currentValue = localStorage.getItem('darkMode');
+    if (!currentValue || currentValue === 'light') {
+      localStorage.setItem('darkMode', 'dark');
+      this.setState({checkedSwitch: true});
+      this.props.getCurrentTheme('dark');
+    } else {
+      localStorage.setItem('darkMode', 'light');
+      this.setState({checkedSwitch: false});
+      this.props.getCurrentTheme('light');
+    }
+  };
+
   render() {
     return (
       <footer>
@@ -18,7 +35,7 @@ export default class Footer extends Component {
         </div>
         <div>
         <label className="switch">
-          <input type="checkbox" />
+          <input type="checkbox" onChange={ this.setLocalStorage } checked={ this.state.checkedSwitch } />
           <span className="slider"></span>
         </label>
         </div>
