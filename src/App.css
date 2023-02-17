@@ -21,6 +21,7 @@
 body {
 	font-family: 'Kanit', sans-serif;
 	font-size: 20px;
+	height: 90vh;
 }
 
 fieldset {
@@ -95,7 +96,7 @@ footer {
 	bottom: 0;
 	overflow: hidden;
 	width: 100vw;
-	height: 60px;
+	height: 10vh;
 }
 
 .dark footer {
