@@ -12,6 +12,7 @@ export default class App extends Component {
     minutos: 0,
     segundos: 0,
     click: false,
+    currentTheme: localStorage.getItem('darkMode')
   }
 
   componentDidMount() {
@@ -42,13 +43,18 @@ export default class App extends Component {
     document.location.reload();
   }
 
+  getCurrentTheme = (currentTheme) => {
+    this.setState({ currentTheme })
+  }
+
   render() {
     const { total, click, botaoIniciar } = this.state;
     const minutos = Math.floor(total / 60);
     const segundos = total % 60;
 
     return (
-      <>
+      <div className={ this.state.currentTheme }>
+        <div className='realBody'>
       <Header
       startado={ !click }
       minutos={ minutos }
@@ -89,8 +95,9 @@ export default class App extends Component {
         ) }
           <Acoes check={ this.check }/>
         </Container>
-      <Footer />
-      </>
+        </div>
+      <Footer getCurrentTheme={this.getCurrentTheme} />
+      </div>
     )
   }
 }

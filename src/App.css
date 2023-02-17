@@ -2,15 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin&family=Silkscreen&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
+:root {
+	--darkColor: #120d14;
+	--weirdGradientColor: rgb(28,28,52);
+	--weirdGradient: linear-gradient(149deg, rgba(28,28,52,1) 15%, rgba(18,13,20,1) 93%);
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
+.dark {
+	background-color: var(--darkColor);
+}
+
 body {
 	font-family: 'Kanit', sans-serif;
 	font-size: 20px;
+}
+
+.realBody {
+	height: 90vh;
 }
 
 fieldset {
@@ -42,6 +56,14 @@ button {
 	box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
 	background: #ffd819;
 	margin-bottom: 15px;
+}
+
+.dark button {
+	background-color: var(--weirdGradientColor);
+	color: white;
+	-webkit-box-shadow: 0px 5px 67px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 67px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 67px -1px rgba(0,0,0,0.75);
 }
 
 button:hover:after {
@@ -77,14 +99,25 @@ footer {
 	bottom: 0;
 	overflow: hidden;
 	width: 100vw;
-	height: 60px;
-	background-color: rgba(255, 255, 255, 0.8)
+	height: 10vh;
+}
+
+.dark footer {
+	background-color: var(--darkColor);
+	color: white;
 }
 
 footer a {
 	text-decoration: none;
-	color: black;
 	margin-right: 10px;
+}
+
+.light footer a {
+	color: black;
+}
+
+.dark footer a {
+	color: white;
 }
 
 header {
@@ -93,6 +126,10 @@ header {
 	align-items: center;
 	justify-content: flex-start;
 	min-height: 17.5vh;
+}
+
+.dark header {
+	color: white;
 }
 
 header h3 {
@@ -111,6 +148,10 @@ header p {
 	flex-flow: row wrap;
   align-items: flex-start;
 	justify-content: space-evenly;
+}
+
+.dark .container {
+	background-color: var(--darkColor);
 }
 
 .cardapio {
@@ -146,6 +187,15 @@ header p {
 	justify-content: space-between;
 }
 
+.dark .item {
+	background: rgb(28,28,52);
+	background: linear-gradient(90deg, rgba(28,28,52,1) 43%, rgba(24,24,50,1) 100%); 
+	color: white;
+	-webkit-box-shadow: 0px 5px 94px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 94px -13px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 94px -13px rgba(0,0,0,0.75);
+}
+
 .itemLucas {
   align-items: center;
 	background-image: linear-gradient(62deg, #f77c6a 0%, #f1ae9e 100%);
@@ -156,6 +206,15 @@ header p {
 	justify-content: space-between;
 }
 
+.dark .itemLucas {
+	background: rgb(46,46,85);
+	background: linear-gradient(90deg, rgba(46,46,85,1) 43%, rgba(50,50,106,1) 100%); 
+	color: white;
+	-webkit-box-shadow: 0px 5px 94px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 94px -13px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 94px -13px rgba(0,0,0,0.75);
+}
+
 .item-product input {
 	margin-right: 15px;
 }
@@ -164,6 +223,10 @@ header p {
 	font-size: 0.85em;
 	letter-spacing: 1px;
 	text-shadow: 1px 1px #ccc
+}
+
+.dark .item-price {
+	text-shadow: none;
 }
 
 .container-col {
@@ -190,6 +253,13 @@ header p {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.0625);
 	overflow: auto;
 	padding: 2em;
+}
+
+.dark .cronometro {
+	background: var(--weirdGradientColor);
+	-webkit-box-shadow: 0px 5px 67px -23px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 67px -23px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 67px -23px rgba(0,0,0,0.75);
 }
 
 .clock-container {
@@ -224,9 +294,18 @@ header p {
 	text-transform: uppercase;
 }
 
+.dark .clock-label {
+	border-top: 1px solid rgba(255, 255, 255, 0.8);
+	color:rgba(255, 255, 255, 0.8)
+}
+
 .clock-timer {
 	font-size: 72px;
 	line-height: 2;
+}
+
+.dark .clock-timer {
+	color: white;
 }
 
 .quotainer {
@@ -244,6 +323,13 @@ header p {
 	font-size: 15px;
 	margin: 5px 10px;
 	box-shadow: 2px 2px #ccc;
+}
+
+.dark .quotainer button {
+	box-shadow: none;
+	-webkit-box-shadow: 0px 5px 67px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 67px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 67px -1px rgba(0,0,0,0.75);
 }
 
 .tech {
@@ -374,7 +460,7 @@ blockquote:after {
  }
  
  input:checked + .slider:after {
-	content: 'EM BREVE';
+	content: 'lightmode';
  }
 
  .sendmail {
@@ -400,6 +486,10 @@ blockquote:after {
   -ms-animation: fadeIn 2s;
 	list-style-type: none;
 	text-align: left;
+ }
+
+ .dark .agradecimentos ul, li, h2 {
+	color: white;
  }
  
  /*--------- END --------*/
