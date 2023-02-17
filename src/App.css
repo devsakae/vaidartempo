@@ -325,6 +325,13 @@ box-shadow: 0px 5px 94px -13px rgba(0,0,0,0.75);
 	box-shadow: 2px 2px #ccc;
 }
 
+.dark .quotainer button {
+	box-shadow: none;
+	-webkit-box-shadow: 0px 5px 67px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 67px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 67px -1px rgba(0,0,0,0.75);
+}
+
 .tech {
 	font-family: 'M PLUS Code Latin', sans-serif;
 }
@@ -479,6 +486,10 @@ blockquote:after {
   -ms-animation: fadeIn 2s;
 	list-style-type: none;
 	text-align: left;
+ }
+
+ .dark .agradecimentos ul, li, h2 {
+	color: white;
  }
  
  /*--------- END --------*/
