@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/vaidartempo/static/css/main.baeb81c3.css",
-    "main.js": "/vaidartempo/static/js/main.33b4be43.js",
+    "main.css": "/vaidartempo/static/css/main.0697b5ff.css",
+    "main.js": "/vaidartempo/static/js/main.30395e0a.js",
     "static/js/787.0699733e.chunk.js": "/vaidartempo/static/js/787.0699733e.chunk.js",
+    "static/media/LucasHenriqueAbreu.01.mp4": "/vaidartempo/static/media/LucasHenriqueAbreu.01.976f9bce175139f799b7.mp4",
+    "static/media/LucasHenriqueAbreu.02.mp4": "/vaidartempo/static/media/LucasHenriqueAbreu.02.32b2abdc3529aa6f8cf1.mp4",
     "static/media/ThiagoFdaSLopes.02.mp3": "/vaidartempo/static/media/ThiagoFdaSLopes.02.fcd38abe221cb12d9c5b.mp3",
     "static/media/cybersekh.mp3": "/vaidartempo/static/media/cybersekh.5ab1c7095874d0d7028e.mp3",
     "static/media/ThiagoFdaSLopes.01.mp3": "/vaidartempo/static/media/ThiagoFdaSLopes.01.4c118fb4c9fcdd76b024.mp3",
@@ -23,12 +25,12 @@
     "static/media/isaacost.ogg": "/vaidartempo/static/media/isaacost.c0a32fba7f24faee6b27.ogg",
     "static/media/nataliakoliveira.01.ogg": "/vaidartempo/static/media/nataliakoliveira.01.0a1802d1d6871b564d43.ogg",
     "index.html": "/vaidartempo/index.html",
-    "main.baeb81c3.css.map": "/vaidartempo/static/css/main.baeb81c3.css.map",
-    "main.33b4be43.js.map": "/vaidartempo/static/js/main.33b4be43.js.map",
+    "main.0697b5ff.css.map": "/vaidartempo/static/css/main.0697b5ff.css.map",
+    "main.30395e0a.js.map": "/vaidartempo/static/js/main.30395e0a.js.map",
     "787.0699733e.chunk.js.map": "/vaidartempo/static/js/787.0699733e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.baeb81c3.css",
-    "static/js/main.33b4be43.js"
+    "static/css/main.0697b5ff.css",
+    "static/js/main.30395e0a.js"
   ]
 }
