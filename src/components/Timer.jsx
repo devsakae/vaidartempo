@@ -3,6 +3,41 @@ import React, { Component } from 'react';
 import falta1min from '../conteudo/audios-falta1min';
 import fimdotempo from '../conteudo/audios-fimdotempo';
 
+const ls1minkey = 'vaidartempo_1minaudios';
+const lstimeupkey = 'vaidartempo_timeupaudios';
+
+// Pega do LS o array de áudios ainda disponíveis para tocar. Se não existir, inclui todos os áudios.
+const allAudios1Min = falta1min.map((audio) => audio.substring(26).split('.')[0]);
+let audiosOf1minRemaining = JSON.parse(localStorage.getItem(ls1minkey)) || allAudios1Min;
+if (audiosOf1minRemaining.length < 1) audiosOf1minRemaining = allAudios1Min;
+
+const allAudiosTimeup = fimdotempo.map((audio) => audio.substring(26).split('.')[0]);
+let audiosOfTimeupRemaining = JSON.parse(localStorage.getItem(lstimeupkey)) || allAudiosTimeup;
+if (audiosOfTimeupRemaining.length < 1) audiosOfTimeupRemaining = allAudiosTimeup;
+
+// Sorteia um número limitado as opções do tamanho dos arrays (pa = primeiro audio, sa = segundo audio)
+const a1Random = Math.floor(Math.random() * audiosOf1minRemaining.length);
+const a2Random = Math.floor(Math.random() * audiosOfTimeupRemaining.length);
+
+const getAudio = (audiosArray, audiosRemaining, audioPicked) => {
+  const audioSearched = audiosRemaining[audioPicked];
+  const audioFile = audiosArray.filter((a) => a.includes(audioSearched))[0];
+  return audioFile;
+};
+
+const saveToLocal = (audiosRemaining, audioPicked, key) => {
+  audiosRemaining.splice(audioPicked, 1);
+  localStorage.setItem(key, JSON.stringify(audiosRemaining));
+}
+
+// Pega o áudio sorteado
+let a1Picked = getAudio(falta1min, audiosOf1minRemaining, +a1Random)
+let a2Picked = getAudio(fimdotempo, audiosOfTimeupRemaining, +a2Random)
+
+// Cria um áudio pra ele
+const a1File = new Audio(a1Picked);
+const a2File = new Audio(a2Picked);
+
 export default class Timer extends Component {
   state = {
     minutos: 0,
@@ -15,18 +50,7 @@ export default class Timer extends Component {
 
   componentDidMount() {
     const { minutos, segundos } = this.props;
-
-    // Sorteia um número limitado as opções do tamanho dos arrays (pa = primeiro audio, sa = segundo audio)
-    const paRandom = Math.floor(Math.random() * falta1min.length);
-    const saRandom = Math.floor(Math.random() * fimdotempo.length);
-
-    // Pega o áudio sorteado
-    const paSorteado = falta1min[paRandom];
-    const saSorteado = fimdotempo[saRandom];
-
-    // Cria um áudio pra ele
-    const paFile = new Audio(paSorteado);
-    const saFile = new Audio(saSorteado);
+    
     this.setState({
       minutos,
       segundos,
@@ -38,24 +62,22 @@ export default class Timer extends Component {
             segundos: segundos - 1
           }))
       }
-      if (minutos === 1 && segundos === 20) {
-        this.thankYou(paSorteado, saSorteado);
+      if (minutos === 1 && segundos === 29) {
+        this.thankYou(a1Picked, a2Picked);
       }
       if (minutos === 1 && segundos === 2) {
-        paFile.play();
+        a1File.play();
+        saveToLocal(audiosOf1minRemaining, +a1Random, ls1minkey);
         this.setState({
           checkUserOne: true,
         })
-        if (!this.state.showUsers) {
-          console.log('execute')
-        }
       }
       if (minutos === 0 && segundos === 2) {
-        saFile.play();
+        a2File.play();
+        saveToLocal(audiosOfTimeupRemaining, +a2Random, lstimeupkey);
         this.setState({
           checkUserTwo: true,
         })
-        window.alert('Lembrar de colocar a aula pra gravar!');
       }
       if (segundos === 0) {
         if (minutos === 0) {
