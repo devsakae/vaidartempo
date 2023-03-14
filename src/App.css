@@ -476,6 +476,11 @@ blockquote:after {
 	display: flex;
 	justify-content: space-evenly;
 	margin: 10px 0;
+	color: var(--darkColor);
+}
+
+.dark .agradecimentos {
+	color: white;
 }
 
  .agradecimentos ul, li {
@@ -488,8 +493,8 @@ blockquote:after {
 	text-align: left;
  }
 
- .dark .agradecimentos ul, li, h2 {
-	color: white;
+ .agradecimentos ul, li, h2 {
+	color: inherit;
  }
  
  /*--------- END --------*/
