@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vaidartempo/static/css/main.0697b5ff.css",
-    "main.js": "/vaidartempo/static/js/main.2edc2243.js",
+    "main.js": "/vaidartempo/static/js/main.ebf6d42f.js",
     "static/js/787.0699733e.chunk.js": "/vaidartempo/static/js/787.0699733e.chunk.js",
     "static/media/LucasHenriqueAbreu.01.mp4": "/vaidartempo/static/media/LucasHenriqueAbreu.01.976f9bce175139f799b7.mp4",
     "static/media/LucasHenriqueAbreu.02.mp4": "/vaidartempo/static/media/LucasHenriqueAbreu.02.32b2abdc3529aa6f8cf1.mp4",
@@ -26,11 +26,11 @@
     "static/media/nataliakoliveira.01.ogg": "/vaidartempo/static/media/nataliakoliveira.01.0a1802d1d6871b564d43.ogg",
     "index.html": "/vaidartempo/index.html",
     "main.0697b5ff.css.map": "/vaidartempo/static/css/main.0697b5ff.css.map",
-    "main.2edc2243.js.map": "/vaidartempo/static/js/main.2edc2243.js.map",
+    "main.ebf6d42f.js.map": "/vaidartempo/static/js/main.ebf6d42f.js.map",
     "787.0699733e.chunk.js.map": "/vaidartempo/static/js/787.0699733e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0697b5ff.css",
-    "static/js/main.2edc2243.js"
+    "static/js/main.ebf6d42f.js"
   ]
 }
