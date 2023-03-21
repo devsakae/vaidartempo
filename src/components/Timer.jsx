@@ -31,8 +31,10 @@ const saveToLocal = (audiosRemaining, audioPicked, key) => {
 }
 
 // Pega o áudio sorteado
-let a1Picked = getAudio(falta1min, audiosOf1minRemaining, +a1Random)
-let a2Picked = getAudio(fimdotempo, audiosOfTimeupRemaining, +a2Random)
+// let a1Picked = getAudio(falta1min, audiosOf1minRemaining, +a1Random)
+// let a2Picked = getAudio(fimdotempo, audiosOfTimeupRemaining, +a2Random)
+let a1Picked = getAudio(falta1min, ['LucasHenriqueAbreu'], 0);
+let a2Picked = getAudio(fimdotempo, ['LucasHenriqueAbreu'], 0);
 
 // Cria um áudio pra ele
 const a1File = new Audio(a1Picked);
@@ -67,14 +69,14 @@ export default class Timer extends Component {
       }
       if (minutos === 1 && segundos === 2) {
         a1File.play();
-        saveToLocal(audiosOf1minRemaining, +a1Random, ls1minkey);
+        // saveToLocal(audiosOf1minRemaining, +a1Random, ls1minkey);
         this.setState({
           checkUserOne: true,
         })
       }
       if (minutos === 0 && segundos === 2) {
         a2File.play();
-        saveToLocal(audiosOfTimeupRemaining, +a2Random, lstimeupkey);
+        // saveToLocal(audiosOfTimeupRemaining, +a2Random, lstimeupkey);
         this.setState({
           checkUserTwo: true,
         })
