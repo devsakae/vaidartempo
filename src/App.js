@@ -96,7 +96,9 @@ export default class App extends Component {
           <Acoes check={ this.check }/>
         </Container>
         </div>
-      <Footer getCurrentTheme={this.getCurrentTheme} />
+        <div className={ this.state.currentTheme }>
+          <Footer getCurrentTheme={this.getCurrentTheme} />
+        </div>
       </div>
     )
   }
