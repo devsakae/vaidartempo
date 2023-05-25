@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Vai dar tempo",
+  "name": "Um timer rápido para intervalo de aula",
   "icons": [
     {
       "src": "favicon.ico",
