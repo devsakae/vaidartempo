@@ -1,7 +1,7 @@
 {
   "name": "vaidartempo",
   "version": "0.1.0",
-  "homepage": "https://devsakae.github.io/vaidartempo",
+  "homepage": "https://intervalo.devsakae.tech",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
