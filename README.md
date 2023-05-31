@@ -8,6 +8,6 @@ Mecanismo simples, com setTimeout, e frontend com dicas de CSS de diversos lugar
 
 ## Como usar?
 
-1) Acesse http://devsakae.github.io/vaidartempo
+1) Acesse o link (ao lado)
 2) Selecione as ações exemplos para somar o tempo
 3) Clique em iniciar
