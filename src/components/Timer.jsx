@@ -93,8 +93,8 @@ export default class Timer extends Component {
   }
 
   thankYou = (arg1, arg2) => {
-    const userone = arg1.substring(26).split('.')[0];
-    const usertwo = arg2.substring(26).split('.')[0];
+    const userone = arg1.split('/')[3].split('.')[0];
+    const usertwo = arg2.split('/')[3].split('.')[0];
     this.setState({
       showUsers: true,
       users: [userone, usertwo]
