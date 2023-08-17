@@ -7,14 +7,12 @@ export default class AcaoCustom extends Component {
   };
 
   addMinutes = (e) => {
-    this.setState({
-      minutes: e.target.value,
-    });
+    if (+e.target.value > 999) return alert('Valor máximo é 999');
+    this.setState({ minutes: e.target.value });
   };
 
   changingCustom = (e) => {
     this.setState((prev) => ({ ...prev, adding: !prev.adding }));
-    console.log(this.state);
     this.props.check(e);
   };
 
@@ -35,8 +33,7 @@ export default class AcaoCustom extends Component {
             <input
               className='customInput'
               type='number'
-              placeholder='30'
-              max={1200}
+              pattern='\d*'
               value={this.state.minutes}
               disabled={this.state.adding}
               onChange={(e) => this.addMinutes(e)}
