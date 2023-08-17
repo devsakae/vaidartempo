@@ -9,12 +9,12 @@ const actions = {
   umemeio: {
     value: 1.5,
     name: '1 min 30 seg',
-    actions: ['Descascar uma fruta', 'Pegar um chocolatinho', 'Passar um café de máquina', 'Olhar o WhatsApp', 'Limpar o monitor'],
+    actions: ['Descascar uma fruta', 'Pegar um chocolatinho', 'Passar um café', 'Olhar o WhatsApp', 'Limpar o monitor'],
   },
   dois: {
     value: 2,
     name: '2 minutos',
-    actions: ['Dar uma olhada no Slack', 'Ler o course de novo', 'Passar 1 fase do Candy Crush', 'Fazer um sanduíche', 'Treinar seu pitch'],
+    actions: ['Ver o Slack', 'Ler o course de novo', 'Jogar Candy Crush', 'Fazer um sanduíche', 'Treinar seu pitch'],
   },
   doisemeio: {
     value: 2.5,

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Acao from './Acao';
+import AcaoCustom from './AcaoCustom';
 // Importação graças a ajuda do Washington
 const actions = require('../conteudo/acoes');
 
@@ -33,7 +34,8 @@ export default class Acoes extends Component {
             {frases &&
               frases?.map((frase, idx) => (
                 <Acao frase={ frase } key={ idx } started={ this.props.started } check={ check } />
-              ))}
+                ))}
+            <AcaoCustom started={ this.props.started } check={ check } />
           </div>
         </form>
       </div>
