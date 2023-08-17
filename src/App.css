@@ -156,6 +156,7 @@ header p {
 
 .cardapio {
 	min-width: 45vw;
+	max-width: 92vw;
   overflow: none;
 	padding-bottom: 10vh;
 }

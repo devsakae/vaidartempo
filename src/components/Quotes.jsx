@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import quotes from '../conteudo/quotes'; 
+import quotes from '../conteudo/quotes';
 
 export default class Quotes extends Component {
   state = {
     totalDeQuotes: [],
     showQuotes: false,
     random: 0,
-  }
+  };
 
   yes = () => {
     const totalDeQuotes = [];
@@ -18,35 +18,31 @@ export default class Quotes extends Component {
     this.setState({
       quotes: totalDeQuotes,
       showQuotes: true,
-    })
+    });
     setInterval(() => {
-      this.setState(prevState => ({
+      this.setState((prevState) => ({
         random: prevState.random + 1,
-      }))
-    }, 60000)
-  }
+      }));
+    }, 60000);
+  };
 
   startIn = (sec) => {
-    setTimeout(() => this.yes(), sec * 1000)
-  }
+    setTimeout(() => this.yes(), sec * 1000);
+  };
 
   render() {
     const { showQuotes, quotes, random } = this.state;
     return (
-      <div className="quotainer">
-        { showQuotes ? (<blockquote className='tech fadeinquote'>{ quotes[random] }</blockquote>) : (
-          <>
-            <div>
-              Enquanto aguarda, vou mostrar frases inspiracionais a não ser que você cancele ok?
-            </div>
-            <div>
-              <button onClick={ () => this.yes() }>Sim</button>
-              <button onClick={ () => this.yes() }>Não vou cancelar</button>
-              { this.startIn(5) }
-            </div>
-          </>
-        ) }
+      <div className='quotainer'>
+        {showQuotes ? (
+          <blockquote className='tech fadeinquote'>{quotes[random]}</blockquote>
+        ) : (
+          <h1>
+            Cronômetro rodando!
+            { this.startIn(5) }
+          </h1>
+        )}
       </div>
-    )
+    );
   }
 }

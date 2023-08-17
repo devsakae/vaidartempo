@@ -93,7 +93,7 @@ export default class App extends Component {
               </div>
             </div>
         ) }
-          <Acoes check={ this.check }/>
+          <Acoes check={ this.check } started={ this.state.click } />
         </Container>
         </div>
         <div className={ this.state.currentTheme }>

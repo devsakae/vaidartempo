@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
+import Acao from './Acao';
 // Importação graças a ajuda do Washington
 const actions = require('../conteudo/acoes');
 
 export default class Acoes extends Component {
   state = {
     frases: '',
-  }
+  };
 
   componentDidMount() {
     const sorteiaAcao = () => {
-      const chaves = Object.keys(actions);
+      const times = Object.keys(actions);
       const frases = [];
-      for (let i = 0; i < chaves.length; i += 1) {
-        const chave = chaves[i];
-        const random = Math.floor(Math.random() * actions[chave].length);
-        const temp = actions[chave][random];
-        frases.push(temp);
+      for (let i = 0; i < times.length; i += 1) {
+        const content = actions[times[i]].actions[Math.floor(Math.random() * actions[times[i]].actions.length)]
+        frases.push({ content: content, value: actions[times[i]].value, name: actions[times[i]].name });
       }
       this.setState({
         frases,
-      })
-    }
+      });
+    };
     sorteiaAcao();
   }
 
@@ -28,117 +27,16 @@ export default class Acoes extends Component {
     const { check } = this.props;
     const { frases } = this.state;
     return (
-      <div className="cardapio">
-        <form className="form">
-            <div className="itens">
-              <label htmlFor="um">
-                <div className="item">
-                  <div className="item-product">
-                    <input
-                      id="um"
-                      value="1"
-                      type="checkbox"
-                      onChange={ (e) => check(e) }
-                    />
-                    { frases[0] }
-                  </div>
-                  <div className="item-price">1 min</div>
-                </div>
-              </label>
-
-              <label htmlFor="umemeio">
-                <div className="item">
-                  <div className="item-product">
-                    <input
-                      id="umemeio"
-                      value="1.5"
-                      type="checkbox"
-                      onChange={ (e) => check(e) }
-                    />
-                    { frases[1] }
-                  </div>
-                  <div className="item-price">1 min 30 seg</div>
-                </div>
-              </label>
-
-              <label htmlFor="dois">
-                <div className="item">
-                  <div className="item-product">
-                    <input
-                      id="dois"
-                      value="2"
-                      type="checkbox"
-                      onChange={ (e) => check(e) }
-                    />
-                    { frases[2] }
-                  </div>
-                  <div className="item-price">2 min</div>
-                </div>
-              </label>
-
-              <label htmlFor="doismeio">
-                <div className="item">
-                  <div className="item-product">
-                    <input
-                      id="doismeio"
-                      value="2.5"
-                      type="checkbox"
-                      onChange={ (e) => check(e) }
-                    />
-                    { frases[3] }
-                  </div>
-                  <div className="item-price">2 min 30 seg</div>
-                </div>
-              </label>
-
-              <label htmlFor="tres">
-                <div className="item">
-                  <div className="item-product">
-                    <input
-                      id="tres"
-                      value="3"
-                      type="checkbox"
-                      onChange={ (e) => check(e) }
-                    />
-                    { frases[4] }
-                  </div>
-                  <div className="item-price">3 min</div>
-                </div>
-              </label>
-
-              <label htmlFor="quatro">
-                <div className="item">
-                  <div className="item-product">
-                    <input
-                      id="quatro"
-                      value="4"
-                      type="checkbox"
-                      onChange={ (e) => check(e) }
-                    />
-                    { frases[5] }
-                  </div>
-                  <div className="item-price">4 min</div>
-                </div>
-              </label>
-
-              <label htmlFor="cinco">
-                <div className="item">
-                  <div className="item-product">
-                    <input
-                      id="cinco"
-                      value="5"
-                      type="checkbox"
-                      onChange={ (e) => check(e) }
-                    />
-                    { frases[6] }
-                  </div>
-                  <div className="item-price">5 min</div>
-                </div>
-              </label>
-
-            </div>
-          </form>            
-        </div>
-    )
+      <div className='cardapio'>
+        <form className='form'>
+          <div className='itens'>
+            {frases &&
+              frases?.map((frase, idx) => (
+                <Acao frase={ frase } key={ idx } started={ this.props.started } check={ check } />
+              ))}
+          </div>
+        </form>
+      </div>
+    );
   }
 }
